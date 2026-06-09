@@ -58,6 +58,12 @@ export const sfSpring = {
 export type SfColorKey = keyof typeof sfColors;
 export type SfFontTheme = "victor" | "bebas" | "lekton";
 
+/** Brand alias — `roxColors` is the same object as `sfColors`.
+ *  Lets consumers import under the Rox UI name without a breaking rename. */
+export const roxColors = sfColors;
+export const roxSpring = sfSpring;
+export const roxEase = sfEase;
+
 /** Semantic meaning of each color — enforce at code-review time */
 export const sfColorMeaning: Record<SfColorKey, string> = {
   bg:         "page background",

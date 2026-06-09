@@ -67,3 +67,41 @@
 
 .sf-caps { text-transform: uppercase; letter-spacing: var(--sf-tracking-caps); font-family: var(--sf-font-mono); }
 .sf-tabular { font-variant-numeric: tabular-nums; }
+
+/* ---- reading measure ---- */
+.sf-measure { max-width: var(--sf-measure); text-wrap: pretty; }
+
+/* ---- elevation utilities (top highlight + bottom shadow) ---- */
+.sf-elev-1 { box-shadow: inset 0 1px 0 0 var(--sf-glass-highlight), 0 2px 8px -4px rgba(0,0,0,0.5); }
+.sf-elev-2 { box-shadow: inset 0 1px 0 0 var(--sf-glass-highlight), inset 0 -1px 0 0 rgba(0,0,0,0.28), 0 10px 28px -12px rgba(0,0,0,0.6); }
+.sf-elev-3 { box-shadow: inset 0 1px 0 0 var(--sf-glass-highlight), inset 0 -1px 0 0 rgba(0,0,0,0.32), var(--sf-glass-shadow); }
+
+/* ---- grain (kills banding, adds film texture) — opt-in via ::after ---- */
+.sf-grain { position: relative; }
+.sf-grain::after {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+  opacity: 0.035; mix-blend-mode: overlay; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-data: reduce) { .sf-grain::after { display: none; } }
+
+/* ---- focus-visible ring (scoped to the kit's interactive surfaces) ---- */
+.sf-nav__link:focus-visible,
+.sf-nav__cta:focus-visible,
+.sf-segmented button:focus-visible,
+.sf-toggle button:focus-visible,
+.sf-mb__item:focus-visible,
+.sf-runbtn:focus-visible,
+.sf-btn-primary:focus-visible,
+.sf-btn-ghost:focus-visible,
+.sf-pgc__import:focus-visible,
+.sf-atom:focus-visible,
+.sf-ws:focus-visible {
+  outline: var(--sf-focus-w) solid var(--sf-focus);
+  outline-offset: 2px;
+  border-radius: var(--sf-r-sm);
+}
+
+/* ---- lit edge on filled buttons (premium highlight) ---- */
+.sf-btn-primary, .sf-nav__cta { box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.28); }

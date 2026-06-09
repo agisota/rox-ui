@@ -8,6 +8,7 @@
 // ── Tokens ──
 export {
   sfColors, sfGlows, sfRadius, sfEase, sfSpring, sfColorMeaning,
+  roxColors, roxSpring, roxEase,
 } from "./tokens/tokens";
 export type { SfColorKey, SfFontTheme } from "./tokens/tokens";
 export * from "./tokens/motion-variants";

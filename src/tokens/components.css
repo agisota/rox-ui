@@ -442,3 +442,38 @@
 .sf-foot__fine { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--sf-hair);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   font-family: var(--sf-font-mono); font-size: 11px; color: var(--sf-ink-faint); }
+
+/* ============================================================
+   v0.4 quick-win polish — lit edges, grain, tabular numerals
+   ============================================================ */
+
+/* premium lit edge on the hero stage (masked gradient border) */
+.sf-stage::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: linear-gradient(180deg, var(--sf-glass-highlight), transparent 45%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* film grain on big tinted panels (over the gradient, under the content) */
+.sf-formula::after, .sf-delta::after, .sf-gravity::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+  opacity: 0.04; mix-blend-mode: overlay; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.sf-formula, .sf-delta { position: relative; }
+@media (prefers-reduced-data: reduce) {
+  .sf-formula::after, .sf-delta::after, .sf-gravity::after { display: none; }
+}
+
+/* tabular numerals so animating numbers / timestamps don't jitter */
+.sf-trace__t, .sf-cl__t, .sf-mb__score, .sf-rstat, .sf-runbtn,
+.sf-runproof__trace, .sf-runterm, .sf-mini-console, .sf-metric__v,
+.sf-node__v, .sf-ws__progress { font-variant-numeric: tabular-nums; }
+
+/* balanced headline wrapping (no orphans) */
+.sf-hero__title, .sf-title, .sf-foot__manifesto, .sf-formula__line { text-wrap: balance; }
+.sf-sub, .sf-hero__sub { text-wrap: pretty; max-width: min(100%, var(--sf-measure)); }

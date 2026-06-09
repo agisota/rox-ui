@@ -3,8 +3,8 @@
 **Project:** Rox UI (formerly `state-first-kit`)
 **Type:** State-First / Transition-First motion + component design system for React
 **Owner:** scharlesky@gmail.com
-**Status:** v0.3 (50 scenes shipped, glass + type-scale layer landed) → roadmap to v1.0
-**Verification baseline:** `tsc --noEmit` clean · 19 tests passing (incl. full-page mount)
+**Status:** v0.4 (50 scenes; glass + type-scale + quick-win polish landed) → roadmap to v1.0
+**Verification baseline:** `tsc --noEmit` clean · 20 tests passing (incl. full-page mount)
 
 ---
 
@@ -105,7 +105,7 @@ Rox UI should feel like a **futuristic operating system for work**: dark graphit
 | Version | Theme | Contents |
 |---|---|---|
 | **v0.3** (now) | Surface quality | glass tokens+utilities, modular type scale, applied to nav/stage/cards |
-| **v0.4** | Brand + theming | `--rox-*` alias layer, light + high-contrast modes, focus-ring token, ESLint/Prettier |
+| **v0.4** (now) | Brand + polish | ✅ `--rox-*`/`roxColors` aliases, focus-ring token, lit edges, grain, tabular nums, reading measure · (next: light + high-contrast modes, ESLint/Prettier) |
 | **v0.5** | A11y + perf | axe gate, keyboard pass, `content-visibility`, reduced-data, per-scene static fallbacks |
 | **v0.9** | DX | per-component exports, size-limit, Storybook/Ladle, `copy import` everywhere, MDX docs |
 | **v1.0** | Hardening | visual-regression CI, full token docs, semantic-color lint rule, migration guide |

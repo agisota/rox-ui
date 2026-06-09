@@ -127,9 +127,9 @@ The north star: a **futuristic operating-system-for-work** aesthetic — translu
 
 ---
 
-## Quick-win bundle (do first, all S/M, mostly CSS)
-**#2 light edges · #3 rings on stage+buttons · #5 grain · #8 tabular nums · #10 reading measure · #13 focus ring · #17 `--rox-*` aliases.**
-Together these are a half-day of low-risk CSS/token work that visibly lifts the whole system, with the verified build staying green.
+## Quick-win bundle ✅ LANDED in v0.4
+**#2 light edges (`.sf-elev-1..3`) · #3 lit-edge ring on hero stage + filled buttons · #5 film grain on tinted panels (reduced-data aware) · #8 tabular numerals on all metrics/timestamps · #10 reading measure (`--sf-measure`) + balanced headlines · #13 scoped `:focus-visible` ring (`--sf-focus`) · #17 `--rox-*` token aliases + `roxColors`/`roxSpring`/`roxEase` exports.**
+Shipped as a single low-risk CSS/token pass; build stayed green (`tsc` clean, 20 tests).
 
 ## Bigger bets (schedule deliberately)
 **#12 light/HC themes · #14 shared-element choreography · #18 cva variant API · #19 a11y+visual CI.**

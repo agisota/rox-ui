@@ -1,13 +1,8 @@
-# Rox UI
+# rox-ui
 
-> A **State-First / Transition-First** motion + component design system for React.
-> The visual language *is* the mental model: `state · transition · event · runtime · monad · trace · validator · agent` — each with its own color, motion signature, and component. Dark graphite blueprint, glass surfaces, semantic color as law.
+The **State-First** visual system as a reusable React + TypeScript + Motion library — tokens, providers, primitives, and composite scenes. Built from the `State-First.html` design reference for [`agisota/set`](https://github.com/agisota/set) (landing + desktop).
 
-`MIT` · React 18/19 · Motion-only · **50 scenes** · drop-in `<StateFirstPage />`
-
-Status: **all 50 scenes built · glass + modular type scale (v0.3) · typecheck clean · 19 tests passing** (`tsc --noEmit`, `vitest run` — incl. a test that mounts the entire page).
-
-**Docs:** [`PRD.md`](./PRD.md) (product requirements & roadmap) · [`BRAINSTORM.md`](./BRAINSTORM.md) (20 improvements toward best-in-class UI/UX).
+Status: **all 50 scenes built · typecheck clean · 19 tests passing** (`tsc --noEmit`, `vitest run` — incl. a test that mounts the entire page).
 
 ## Install
 

@@ -93,6 +93,28 @@
   --sf-glass-target:    rgba(125, 255, 158, 0.07);
   --sf-glass-transition:rgba(255, 122, 43, 0.07);
   --sf-glass-runtime:   rgba(111, 184, 201, 0.07);
+
+  /* ── Focus & reading ── */
+  --sf-focus:    #6FB8C9;          /* focus-visible ring (runtime cyan) */
+  --sf-focus-w:  2px;
+  --sf-measure:  64ch;             /* max line length for body copy */
+}
+
+/* ── Brand aliases ── (rox-* → sf-*; use either, no breaking rename) */
+:root {
+  --rox-bg: var(--sf-bg);
+  --rox-panel: var(--sf-panel);
+  --rox-ink: var(--sf-ink);
+  --rox-ink-dim: var(--sf-ink-dim);
+  --rox-ink-faint: var(--sf-ink-faint);
+  --rox-target: var(--sf-target);
+  --rox-transition: var(--sf-transition);
+  --rox-runtime: var(--sf-runtime);
+  --rox-friction: var(--sf-friction);
+  --rox-warning: var(--sf-warning);
+  --rox-glass-bg: var(--sf-glass-bg);
+  --rox-glass-border: var(--sf-glass-border);
+  --rox-focus: var(--sf-focus);
 }
 
 /* ── Font themes ── */

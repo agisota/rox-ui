@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { sfColors, sfColorMeaning, sfSpring, sfEase } from "../tokens/tokens";
+import { sfColors, sfColorMeaning, sfSpring, sfEase, roxColors, roxSpring } from "../tokens/tokens";
 import { stateFirstExamples, ontologyAtoms } from "../data/demo-data";
 
 describe("tokens", () => {
@@ -21,6 +21,11 @@ describe("tokens", () => {
   it("ships a spring config for MotionConfig", () => {
     expect(sfSpring.type).toBe("spring");
     expect(sfEase).toHaveLength(4);
+  });
+
+  it("exposes rox-* brand aliases pointing at the same values", () => {
+    expect(roxColors).toBe(sfColors);
+    expect(roxSpring).toBe(sfSpring);
   });
 });
 
