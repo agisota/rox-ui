@@ -6,7 +6,9 @@ Status (v0.5): **all 50 scenes · glass surfaces · light/dark/high-contrast the
 
 **Themes:** `<ColorThemeProvider>` + `<ColorThemeSwitch/>` (dark / light / high-contrast). **Fonts:** Victor Mono / Bebas Neue / Lekton. **Motion:** Full / Essential / Off. **Sound:** opt-in WebAudio ticks (off by default). **Scroll:** `<ScrollProgress/>` + `<ScrollSignal/>` + magnetic active nav. **Variants:** `<Surface>` / `<Button>` (cva). **Catalog:** Ladle stories. **Quality:** axe test + Playwright visual + ESLint/Prettier + GitHub Actions scaffolds.
 
-**Docs:** [`PRD.md`](./PRD.md) · [`BRAINSTORM.md`](./BRAINSTORM.md) (all 20 improvements, now landed).
+**▶ Live demo:** https://agisota.github.io/rox-motion/ — the full `/state-first` page (all 50 scenes, theme/font/motion switches).
+
+**Docs:** [`PRD.md`](./PRD.md) · [`BRAINSTORM.md`](./BRAINSTORM.md) (all 20 improvements, now landed) · [`CHANGELOG.md`](./CHANGELOG.md).
 
 ## Install
 
